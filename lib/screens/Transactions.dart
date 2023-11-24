@@ -13,7 +13,7 @@ class TransactionsState extends State<Transactions> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey[100],
-        bottomNavigationBar: BottomNav(),
+        bottomNavigationBar: const BottomNav(),
         appBar: AppBar(
             backgroundColor: Colors.blue,
             foregroundColor: Colors.white,

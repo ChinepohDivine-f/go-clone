@@ -1,6 +1,3 @@
-import "package:app1/screens/Home.dart";
-import "package:app1/screens/Transactions.dart";
-import "package:app1/screens/studentProfile.dart";
 import "package:flutter/material.dart";
 
 class BottomNav extends StatefulWidget {

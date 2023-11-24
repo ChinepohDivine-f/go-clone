@@ -12,7 +12,7 @@ class _AnnoncementState extends State<Annoncement> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: BottomNav(),
+        bottomNavigationBar: const BottomNav(),
         appBar: AppBar(
             backgroundColor: Colors.blue,
             foregroundColor: Colors.white,

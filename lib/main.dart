@@ -1,5 +1,4 @@
 import 'package:app1/screens/Transactions.dart';
-import 'package:app1/screens/optionScreens/announcements.dart';
 import 'package:app1/screens/studentProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:app1/screens/Home.dart';
