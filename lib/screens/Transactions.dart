@@ -21,35 +21,61 @@ class TransactionsState extends State<Transactions> {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold))),
         body: Column(
           children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              width: double.infinity,
-              height: 80,
-              decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(5)),
-                  color: Colors.white),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                // crossAxisAlignment: CrossAxisAlignment.,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: Colors.blueAccent,
-                          borderRadius: BorderRadius.circular(3)),
-                      child: ElevatedButton.icon(
-                        onPressed: () {},
-                        icon: Icon(Icons.arrow_forward_ios_outlined),
-                        label: Text("SCHOOL FEE PAYMENTS"),
-                        style: ButtonStyle(color: Colors.transparent),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
+           const TransactionContainer(transaction_: 'SCHOOL FEE PAYMENTS',),
+           const TransactionContainer(transaction_: 'MEDICAL FEE PAYMENTS',),
+           const TransactionContainer(transaction_: 'PLATFORM SERVICE CHARGES',),
           ],
         ));
+  }
+}
+
+class TransactionContainer extends StatelessWidget {
+  const TransactionContainer({
+    super.key, required this.transaction_, 
+  });
+
+  @override
+  final String transaction_;
+  // final void t_operation();
+
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        margin: const EdgeInsets.all(10),
+        width: double.infinity,
+        height: 80,
+        decoration: BoxDecoration(
+            borderRadius: const BorderRadius.all(Radius.circular(5)),
+            color: Colors.white,
+            boxShadow:List.filled(3, const BoxShadow(color: Colors.black12, spreadRadius: 1, blurRadius: 10)),
+            ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          // crossAxisAlignment: CrossAxisAlignment.,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                  decoration: BoxDecoration(
+                    // boxShadow:List.filled(3, BoxShadow(color: Colors.black12, spreadRadius: 1, blurRadius: 10)),
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(3)),
+                  child: Row(
+                    children: [
+                      IconButton(
+                          onPressed: () {},
+                          icon: const  Icon(Icons.arrow_forward,
+                              color: Colors.white, size: 20)),
+                      Text(transaction_,
+                          style: const TextStyle(
+                              color: Colors.white, fontSize: 12)),
+                    ],
+                  )),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }

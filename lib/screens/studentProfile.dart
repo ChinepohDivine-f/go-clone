@@ -17,7 +17,21 @@ class _StudentProfileState extends State<StudentProfile> {
           backgroundColor: Colors.blue,
           foregroundColor: Colors.white,
           leading: null,
-          title: Text("Student Profile", style: TextStyle(fontSize: 16)),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text("Student Profile", style: TextStyle(fontSize: 16)),
+              GestureDetector(
+                onTap: (){},
+                child: const Row(
+                  children: [
+                    Icon(Icons.refresh),
+                    Text("refresh", style: TextStyle(fontSize: 10, color: Colors.white))
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
         bottomNavigationBar: BottomNav(),
         body: Text("Student profile")
