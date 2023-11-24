@@ -1,14 +1,14 @@
 import "package:app1/screens/widgets/bottom-nav.dart";
 import "package:flutter/material.dart";
 
-class Annoncement extends StatefulWidget {
-  const Annoncement({super.key});
+class Announcement extends StatefulWidget {
+  const Announcement({super.key});
 
   @override
-  State<Annoncement> createState() => _AnnoncementState();
+  State<Announcement> createState() => _AnnouncementState();
 }
 
-class _AnnoncementState extends State<Annoncement> {
+class _AnnouncementState extends State<Announcement> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,10 +16,7 @@ class _AnnoncementState extends State<Annoncement> {
         appBar: AppBar(
             backgroundColor: Colors.blue,
             foregroundColor: Colors.white,
-            leading: BackButton(
-              style: ButtonStyle(
-                  visualDensity: VisualDensity.adaptivePlatformDensity),
-            ),
+            
             title: const Text("Announcements/Notifications",
                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold))),
         body: SingleChildScrollView(

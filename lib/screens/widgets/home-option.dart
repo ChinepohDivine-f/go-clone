@@ -1,3 +1,4 @@
+import "package:app1/screens/optionScreens/announcements.dart";
 import "package:flutter/material.dart";
 
 class HomeOptions extends StatelessWidget {
@@ -16,10 +17,17 @@ class HomeOptions extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(5))),
       child: Column(
         children: [
-          const Options(
-              title_: 'Notification',
-              subtitle_: 'Browse latest annoncements',
-              icon_: Icons.notifications),
+          Options(
+            title_: 'Notification',
+            subtitle_: 'Browse latest annoncements',
+            icon_: Icons.notifications,
+            optioncallback: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => const Announcement()));
+            },
+          ),
           Divider(
             color: Colors.grey[300],
             indent: 53.0,
@@ -57,14 +65,14 @@ class Options extends StatelessWidget {
     super.key,
     this.icon_,
     required this.title_,
-    required this.subtitle_, this.optioncallback,
+    required this.subtitle_,
+    this.optioncallback,
   });
 
-  
   final icon_;
   final String title_;
   final String subtitle_;
-  final void optioncallback;
+  final optioncallback;
   @override
   Widget build(BuildContext context) {
     return Column(
