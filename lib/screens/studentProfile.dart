@@ -20,7 +20,7 @@ class _StudentProfileState extends State<StudentProfile> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Student Profile", style: TextStyle(fontSize: 16)),
+              const Text("Student Profile", style: TextStyle(fontSize: 16)),
               GestureDetector(
                 onTap: (){},
                 child: const Row(
@@ -33,8 +33,8 @@ class _StudentProfileState extends State<StudentProfile> {
             ],
           ),
         ),
-        bottomNavigationBar: BottomNav(),
-        body: Text("Student profile")
+        bottomNavigationBar: const BottomNav(),
+        body: const Text("Student profile")
       ),
     );
   }

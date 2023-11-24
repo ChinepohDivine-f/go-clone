@@ -13,7 +13,7 @@ class TransactionsState extends State<Transactions> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey[100],
-        bottomNavigationBar: BottomNav(),
+        bottomNavigationBar: const BottomNav(),
         appBar: AppBar(
             backgroundColor: Colors.blue,
             foregroundColor: Colors.white,
@@ -22,7 +22,7 @@ class TransactionsState extends State<Transactions> {
         body: Column(
           children: [
             Container(
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               width: double.infinity,
               height: 80,
               decoration: const BoxDecoration(
@@ -40,8 +40,8 @@ class TransactionsState extends State<Transactions> {
                           borderRadius: BorderRadius.circular(3)),
                       child: ElevatedButton.icon(
                         onPressed: () {},
-                        icon: Icon(Icons.arrow_forward_ios_outlined),
-                        label: Text("SCHOOL FEE PAYMENTS"),
+                        icon: const Icon(Icons.arrow_forward_ios_outlined),
+                        label: const Text("SCHOOL FEE PAYMENTS"),
                       ),
                     ),
                   )
@@ -58,10 +58,9 @@ class TransactionContainer extends StatelessWidget {
     super.key, required this.transaction_, 
   });
 
-  @override
   final String transaction_;
   // final void t_operation();
-
+  @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {},
