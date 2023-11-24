@@ -42,7 +42,6 @@ class TransactionsState extends State<Transactions> {
                         onPressed: () {},
                         icon: Icon(Icons.arrow_forward_ios_outlined),
                         label: Text("SCHOOL FEE PAYMENTS"),
-                        style: ButtonStyle(color: Colors.transparent),
                       ),
                     ),
                   )

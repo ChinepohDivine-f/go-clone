@@ -60,11 +60,11 @@ class Options extends StatelessWidget {
     required this.subtitle_,
   });
 
-  @override
   final icon_;
   final String title_;
   final String subtitle_;
   // void Function? executeOpt;
+  @override
   Widget build(BuildContext context) {
     return Column(
       children: [
