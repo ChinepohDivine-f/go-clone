@@ -1,4 +1,5 @@
 import 'package:app1/screens/Transactions.dart';
+import 'package:app1/screens/optionScreens/announcements.dart';
 import 'package:app1/screens/studentProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:app1/screens/Home.dart';
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      showSemanticsDebugger: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
@@ -26,6 +28,7 @@ class MyApp extends StatelessWidget {
         "/Transactions": (_) => const Transactions(),
       },
       home: const Home(),
+      // home: const Annoncement()
 
     );
   }

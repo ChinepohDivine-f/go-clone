@@ -26,6 +26,7 @@ class _BottomNavState extends State<BottomNav> {
           onTap: (currentIndex) {
             if (currentIndex == 0) {
               Navigator.pushReplacementNamed(context, "/Home");
+              
             }
             if (currentIndex == 1) {
               Navigator.pushReplacementNamed(context, "/StudentProfile");
@@ -35,7 +36,7 @@ class _BottomNavState extends State<BottomNav> {
             }
           },
           items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home" ),
             BottomNavigationBarItem(
                 icon: Icon(Icons.person), label: "Student Profile"),
             BottomNavigationBarItem(
