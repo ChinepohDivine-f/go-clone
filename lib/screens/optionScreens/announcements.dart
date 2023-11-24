@@ -39,7 +39,7 @@ class _AnnoncementState extends State<Annoncement> {
             width: double.infinity,
             height: 40,
             decoration: const BoxDecoration(color: Colors.blueGrey),
-            child: Text("General Notice(s)", style: TextStyle(color: Colors.white, fontSize: 15))
+            child: const Text("General Notice(s)", style: TextStyle(color: Colors.white, fontSize: 15))
           );
   }
 }
