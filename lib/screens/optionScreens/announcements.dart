@@ -20,7 +20,7 @@ class _AnnoncementState extends State<Annoncement> {
               style: ButtonStyle(
                   visualDensity: VisualDensity.adaptivePlatformDensity),
             ),
-            title: Text("Announcements/Notifications",
+            title: const Text("Announcements/Notifications",
                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold))),
         body: SingleChildScrollView(
             child: Column(
@@ -35,11 +35,11 @@ class _AnnoncementState extends State<Annoncement> {
 
   Container newMethod() {
     return Container(
-            margin: EdgeInsets.all(10),
+            margin: const EdgeInsets.all(10),
             width: double.infinity,
             height: 40,
-            decoration: BoxDecoration(color: Colors.blueGrey),
-            child: Center(child: Text("General Notice(s)", style: TextStyle(color: Colors.white, fontSize: 15)))
+            decoration: const BoxDecoration(color: Colors.blueGrey),
+            child: Text("General Notice(s)", style: TextStyle(color: Colors.white, fontSize: 15))
           );
   }
 }

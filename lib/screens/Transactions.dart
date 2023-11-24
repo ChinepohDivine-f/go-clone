@@ -19,11 +19,11 @@ class TransactionsState extends State<Transactions> {
             foregroundColor: Colors.white,
             title: const Text("Payment Transactions",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold))),
-        body: Column(
+        body: const Column(
           children: [
-           const TransactionContainer(transaction_: 'SCHOOL FEE PAYMENTS',),
-           const TransactionContainer(transaction_: 'MEDICAL FEE PAYMENTS',),
-           const TransactionContainer(transaction_: 'PLATFORM SERVICE CHARGES',),
+           TransactionContainer(transaction_: 'SCHOOL FEE PAYMENTS',),
+           TransactionContainer(transaction_: 'MEDICAL FEE PAYMENTS',),
+           TransactionContainer(transaction_: 'PLATFORM SERVICE CHARGES',),
           ],
         ));
   }
@@ -34,10 +34,10 @@ class TransactionContainer extends StatelessWidget {
     super.key, required this.transaction_, 
   });
 
-  @override
+  
   final String transaction_;
   // final void t_operation();
-
+  @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {},
@@ -72,7 +72,7 @@ class TransactionContainer extends StatelessWidget {
                               color: Colors.white, fontSize: 12)),
                     ],
                   )),
-            )
+            ),
           ],
         ),
       ),

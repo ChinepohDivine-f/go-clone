@@ -57,14 +57,15 @@ class Options extends StatelessWidget {
     super.key,
     this.icon_,
     required this.title_,
-    required this.subtitle_,
+    required this.subtitle_, this.optioncallback,
   });
 
-  @override
+  
   final icon_;
   final String title_;
   final String subtitle_;
-  // void Function? executeOpt;
+  final void optioncallback;
+  @override
   Widget build(BuildContext context) {
     return Column(
       children: [
@@ -93,7 +94,7 @@ class Options extends StatelessWidget {
                 size: 10, color: Colors.black),
           ),
           onTap: () {
-            Navigator.pushNamed(context, '/home');
+            optioncallback;
           },
         ),
       ],
