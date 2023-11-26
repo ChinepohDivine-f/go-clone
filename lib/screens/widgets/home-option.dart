@@ -17,11 +17,13 @@ class HomeOptions extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(5))),
       child: Column(
         children: [
-          Options(
-            title_: 'Notification',
-            subtitle_: 'Browse latest annoncements',
-            icon_: Icons.notifications,
-            optioncallback: () {
+          GestureDetector(
+            child: const Options(
+              title_: 'Notification',
+              subtitle_: 'Browse latest annoncements',
+              icon_: Icons.notifications,
+            ),
+            onTap: () {
               Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -66,13 +68,13 @@ class Options extends StatelessWidget {
     this.icon_,
     required this.title_,
     required this.subtitle_,
-    this.optioncallback,
+    // this.optioncallback,
   });
 
   final icon_;
   final String title_;
   final String subtitle_;
-  final optioncallback;
+  // final optioncallback;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -101,9 +103,9 @@ class Options extends StatelessWidget {
             child: const Icon(Icons.arrow_forward_ios,
                 size: 10, color: Colors.black),
           ),
-          onTap: () {
-            optioncallback;
-          },
+          // onTap: () {
+          //   optioncallback;
+          // },
         ),
       ],
     );

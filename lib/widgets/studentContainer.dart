@@ -20,25 +20,27 @@ class StudentContainer extends StatelessWidget {
           children: [
             ClipRRect(
                 borderRadius: const BorderRadius.all(Radius.circular(70)),
-                child: Image.asset("assets/images/chinepoh.png", height: 70,)),
+                child: Image.asset("assets/images/chinepoh.png", height: 75,)),
                 const SizedBox(width: 5,),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("CHINEPOH DIVINE-FAVOUR", style: TextStyle(fontSize: 12,  color: Colors.blue),),
-                  Text("FE21A159", style: TextStyle(fontSize: 11, color: Colors.blue)),
-                  Text("B.ENG COMPUTER ENGINEERING", style: TextStyle(fontSize: 10,  color: Colors.blue)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text("2023/2024", style: TextStyle(fontSize: 10, color: Colors.black54)),
-                      SizedBox(width: 35,),
-                      Text("First Semester", style: TextStyle(fontSize: 10, color: Colors.black54))
-                    ],
-                  ),
-                ],
+            const IntrinsicWidth(
+              child: Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("CHINEPOH DIVINE-FAVOUR", style: TextStyle(fontSize: 12,  color: Colors.blue),),
+                    Text("FE21A159", style: TextStyle(fontSize: 11, color: Colors.blue)),
+                    Text("B.ENG COMPUTER ENGINEERING", style: TextStyle(fontSize: 10,  color: Colors.blue)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text("2023/2024", style: TextStyle(fontSize: 10, color: Colors.black54)),
+                        SizedBox(width: 35,),
+                        Text("First Semester", style: TextStyle(fontSize: 10, color: Colors.black54))
+                      ],
+                    ),
+                  ],
+                ),
               ),
             )
           ],

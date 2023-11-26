@@ -5,18 +5,9 @@ class HomeCategoryBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(8.0),
-      child: Column(children: <Widget>[
-        Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[CategoryContainer(), CategoryContainer()],
-          ),
-        ),
-        // Row(children: [],),
-        // Row(children: [],),
-      ]),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: CategoryContainer(),
     );
   }
 }
@@ -30,25 +21,22 @@ class CategoryContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.transparent,
-      width: 100,
-      height: 320,
       child: GridView.builder(
         shrinkWrap: true,
-        itemCount: 3,
-        itemBuilder: (context, index){
-            return Container(
-              // height: 40,
-              // width: 40,
-              color: Colors.blue,
-            );
-        }, gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 1,
-          mainAxisSpacing: 10,
-          crossAxisSpacing: 25.0,
-            
-          
-          ),
-          ),
+        itemCount: 6,
+        itemBuilder: (context, index) {
+          return Container(
+            height: 50,
+            // width: double.infinity,
+            color: Colors.blue,
+          );
+        },
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          mainAxisSpacing: 15,
+          crossAxisSpacing: 15,
+        ),
+      ),
     );
 
     // Column(

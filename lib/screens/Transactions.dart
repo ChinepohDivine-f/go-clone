@@ -57,22 +57,38 @@ class TransactionContainer extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
+                height: 35,
                   decoration: BoxDecoration(
-                    // boxShadow:List.filled(3, BoxShadow(color: Colors.black12, spreadRadius: 1, blurRadius: 10)),
+                    boxShadow:List.filled(3, BoxShadow(color: Colors.black12, spreadRadius: 1, blurRadius: 10)),
                       color: Colors.blue,
                       borderRadius: BorderRadius.circular(3)),
                   child: Row(
                     children: [
+                      // TextButton.icon(
+                      //   style:const  ButtonStyle(
+                      //     textStyle: MaterialStatePropertyAll(TextStyle(color: Colors.black)),
+                      //     backgroundColor:MaterialStatePropertyAll(Color.fromARGB(0, 17, 90, 224)), 
+                      //     foregroundColor:MaterialStatePropertyAll(Color.fromARGB(0, 0, 0, 0)), 
+                      //   // foregroundColor: Colors.black,
+                      //   ),
+                      //   onPressed: (){}, icon: Icon(Icons.arrow_forward), label:  
+                      // Text(transaction_,
+                      //     style: const TextStyle(
+                      //         color: Colors.white, fontSize: 12),),
+                  
+                      // ),
                       IconButton(
                           onPressed: () {},
+                          selectedIcon: const Icon(Icons.arrow_downward),
                           icon: const  Icon(Icons.arrow_forward,
                               color: Colors.white, size: 20)),
                       Text(transaction_,
                           style: const TextStyle(
-                              color: Colors.white, fontSize: 12)),
+                              color: Colors.white, fontSize: 12),),
                     ],
                   )),
             ),
+            
           ],
         ),
       ),
