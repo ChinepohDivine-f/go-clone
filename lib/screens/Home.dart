@@ -35,11 +35,9 @@ class Home extends StatelessWidget {
         body: const SingleChildScrollView(
           child: Column(mainAxisSize: MainAxisSize.max, children: [
             StudentContainer(),
-            SizedBox(height: 5),
+            //SizedBox(height: 3),
             HomeCategoryBox(),
-            SizedBox(
-              height: 5,
-            ),
+            //SizedBox(height: 3,),
             HomeOptions(),
           ]),
         ));

@@ -28,9 +28,13 @@ class StudentContainer extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("CHINEPOH DIVINE-FAVOUR", style: TextStyle(fontSize: 12,  color: Colors.blue),),
-                    Text("FE21A159", style: TextStyle(fontSize: 11, color: Colors.blue)),
-                    Text("B.ENG COMPUTER ENGINEERING", style: TextStyle(fontSize: 10,  color: Colors.blue)),
+                    IntrinsicWidth(
+                      child: Column(
+                        children: [ Text("CHINEPOH DIVINE-FAVOUR", style: TextStyle(fontSize: 12,  color: Colors.blue)),Text("FE21A159", style: TextStyle(fontSize: 11, color: Colors.blue)),
+                      Text("B.ENG COMPUTER ENGINEERING", style: TextStyle(fontSize: 10,  color: Colors.blue)),
+                  ]
+    )),
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
