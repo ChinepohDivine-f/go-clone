@@ -21,12 +21,15 @@ class _BottomNavState extends State<BottomNav> {
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white70,
           // currentIndex: 0,
-          unselectedFontSize: 11,
-          selectedFontSize: 12,
+          unselectedFontSize: 14,
+          selectedFontSize: 16,
           onTap: (currentIndex) {
             if (currentIndex == 0) {
-              Navigator.pushReplacementNamed(context, "/Home");
+              _BottomNavState(
+                
+              );
               
+              Navigator.pushReplacementNamed(context, "/Home");
             }
             if (currentIndex == 1) {
               Navigator.pushReplacementNamed(context, "/StudentProfile");

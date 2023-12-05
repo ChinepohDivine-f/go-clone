@@ -23,7 +23,7 @@ class _AnnouncementState extends State<Announcement> {
         ),
         title: const Text(
           "Announcements/Notifications",
-          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
       ),
       body: SingleChildScrollView(
@@ -59,7 +59,7 @@ class _AnnouncementState extends State<Announcement> {
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w400,
-                    fontSize: 13
+                    fontSize: 14
                   ),
                 ),
               )));
@@ -80,11 +80,11 @@ class _AnnouncementState extends State<Announcement> {
                 children: [
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal:10.0),
-                    child: Text("RESUMPTION OF LECTURES", style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),),
+                    child: Text("RESUMPTION OF LECTURES", style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontSize: 18),),
                   ),
                   Padding(
                     padding: EdgeInsets.all(10.0),
-                    child: IntrinsicWidth(child: Text("Welcome to the First Semester. The Student body is called upon to be assiduous in their studies and respect all deadlines related to academic activities for a successful First Semester in the 2023/2024 academic year. Course Registration Deadline: 31/12/2023", style: TextStyle(fontSize: 13),),),
+                    child: IntrinsicWidth(child: Text("Welcome to the First Semester. The Student body is called upon to be assiduous in their studies and respect all deadlines related to academic activities for a successful First Semester in the 2023/2024 academic year. Course Registration Deadline: 31/12/2023", style: TextStyle(fontSize: 16),),),
                   ),
                 ],
               ),
@@ -114,7 +114,7 @@ class _AnnouncementState extends State<Announcement> {
               "General Notice(s)",
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 15,
+                fontSize: 16,
               ),
             ),
           ),

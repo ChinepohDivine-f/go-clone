@@ -1,4 +1,5 @@
 import "package:app1/widgets/home-category.dart";
+import "package:app1/widgets/nuemorphic_container.dart";
 import "package:app1/widgets/studentContainer.dart";
 import "package:flutter/material.dart";
 import "package:app1/screens/widgets/bottom-nav.dart";
@@ -21,7 +22,7 @@ class Home extends StatelessWidget {
           scrolledUnderElevation: 2.0,
           backgroundColor: Colors.blue,
           foregroundColor: Colors.white,
-          // toolbarHeight: 58.0,
+          toolbarHeight: 70.0,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.end,
@@ -32,14 +33,16 @@ class Home extends StatelessWidget {
             ],
           ),
         ),
-        body: const SingleChildScrollView(
-          child: Column(mainAxisSize: MainAxisSize.max, children: [
-            StudentContainer(),
-            //SizedBox(height: 3),
-            HomeCategoryBox(),
-            //SizedBox(height: 3,),
-            HomeOptions(),
-          ]),
+        body: const NuemorphicC(
+          Content_child: SingleChildScrollView(
+            child: Column(mainAxisSize: MainAxisSize.max, children: [
+              StudentContainer(),
+              //SizedBox(height: 3),
+              HomeCategoryBox(),
+              //SizedBox(height: 3,),
+              HomeOptions(),
+            ]),
+          ),
         ));
   }
 }
@@ -58,12 +61,12 @@ class HomeTitle extends StatelessWidget {
       children: [
         Text(
           "Go-Student",
-          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           textAlign: TextAlign.left,
         ),
         Text(
           "University of Buea",
-          style: TextStyle(fontSize: 14),
+          style: TextStyle(fontSize: 16),
         ),
       ],
     );

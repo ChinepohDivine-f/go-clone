@@ -5,8 +5,8 @@ class HomeCategoryBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(15.0),
+    return const Padding(
+      padding: EdgeInsets.all(15.0),
       child: CategoryContainer(),
     );
   }
@@ -28,40 +28,29 @@ class CategoryContainer extends StatelessWidget {
         // scrollDirection:Axis.horizontal,
         itemBuilder: (context, index) {
           return Container(
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.white.withOpacity(0.6),
-                        blurRadius: 3.0,
-                        blurStyle: BlurStyle.normal,
-                        offset: const Offset(-4, -5)
-                    ),
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.3),
-                      blurRadius: 3.0,
-                      offset: const Offset(1, 4)
-                    )
-                  ],
-                  borderRadius: const BorderRadius.all(Radius.circular(5))),
+            // height: 200,
+              decoration: customBoxDecoration(),
               child: const Padding(
                 padding: EdgeInsets.all(10.0),
                 child: Column(
                   children: [
+                    SizedBox(height: 5,),
                     Icon(Icons.school, size: 60, color: Colors.blue),
+                    SizedBox(height: 5,),
                     Text(
                       "Academic Structure",
-                      style: TextStyle(fontSize: 11, color: Colors.blue),
-                    )
+                      style: TextStyle(fontSize: 16, color: Colors.blue),
+                    ),
+                    // SizedBox(height: 24,)
                   ],
                 ),
               ));
         },
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          mainAxisSpacing: 15,
-          crossAxisSpacing: 15,
-          mainAxisExtent: 120.0,
+          mainAxisSpacing: 20,
+          crossAxisSpacing: 20,
+          mainAxisExtent: 132.5,
         ),
       ),
     );
@@ -120,5 +109,27 @@ class CategoryContainer extends StatelessWidget {
     //         ),
     //       )),]
     // );
+  }
+
+  BoxDecoration customBoxDecoration() {
+    return BoxDecoration(
+                color: Colors.white,
+                
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.white38.withOpacity(0.6),
+                      blurRadius: 7.0,
+                      spreadRadius: 1,
+                      // blurStyle: BlurStyle.normal,
+                      offset: const Offset(-4, -5)
+                  ),
+                  BoxShadow(
+                    color: Colors.blue.shade200.withOpacity(0.1),
+                    blurRadius: 7.0,
+                    spreadRadius: 1,
+                    offset: const Offset(4, 5)
+                  )
+                ],
+                borderRadius: const BorderRadius.all(Radius.circular(5)));
   }
 }

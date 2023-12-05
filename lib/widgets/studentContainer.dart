@@ -8,46 +8,61 @@ class StudentContainer extends StatelessWidget {
     return Container(
         padding: const EdgeInsets.all(15),
         margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
-        height: 120,
+        height: 140,
         width: double.infinity,
         decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.all(
               Radius.circular(5),
             )),
-        child: Row(
-          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            ClipRRect(
-                borderRadius: const BorderRadius.all(Radius.circular(70)),
-                child: Image.asset("assets/images/chinepoh.png", height: 75,)),
-                const SizedBox(width: 5,),
-            const IntrinsicWidth(
-              child: Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    IntrinsicWidth(
-                      child: Column(
-                        children: [ Text("CHINEPOH DIVINE-FAVOUR", style: TextStyle(fontSize: 12,  color: Colors.blue)),Text("FE21A159", style: TextStyle(fontSize: 11, color: Colors.blue)),
-                      Text("B.ENG COMPUTER ENGINEERING", style: TextStyle(fontSize: 10,  color: Colors.blue)),
-                  ]
-    )),
-
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Text("2023/2024", style: TextStyle(fontSize: 10, color: Colors.black54)),
-                        SizedBox(width: 35,),
-                        Text("First Semester", style: TextStyle(fontSize: 10, color: Colors.black54))
-                      ],
-                    ),
-                  ],
-                ),
+        child: Center(
+          child: Row(
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              ClipRRect(
+                  borderRadius: const BorderRadius.all(Radius.circular(70)),
+                  child: Image.asset(
+                    "assets/images/chinepoh.png",
+                    height: 97,
+                  )),
+              const SizedBox(
+                width: 10,
               ),
-            )
-          ],
+              const IntrinsicWidth(
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      IntrinsicWidth(
+                          child: Column(children: [
+                        Text("CHINEPOH DIVINE-FAVOUR",
+                            style: TextStyle(fontSize: 16, color: Colors.blue)),
+                        Text("FE21A159",
+                            style: TextStyle(fontSize: 16, color: Colors.blue)),
+                        Text("B.ENG COMPUTER ENGINEERING",
+                            style: TextStyle(fontSize: 14, color: Colors.blue)),
+                      ])),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text("2023/2024",
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.black54)),
+                          SizedBox(
+                            width: 35,
+                          ),
+                          Text("First Semester",
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.black54))
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
         ));
   }
 }

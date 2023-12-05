@@ -1,3 +1,4 @@
+import "package:app1/screens/optionScreens/account-setting.dart";
 import "package:app1/screens/optionScreens/announcements.dart";
 import "package:flutter/material.dart";
 
@@ -30,22 +31,20 @@ class HomeOptions extends StatelessWidget {
                       builder: (BuildContext context) => const Announcement()));
             },
           ),
-          Divider(
-            color: Colors.grey[300],
-            indent: 53.0,
-            thickness: 1,
-            height: 0.15,
+          customDivider(),
+          GestureDetector(
+            child: const Options(
+                title_: 'Account Settings',
+                subtitle_: 'Update account Profile',
+                icon_: Icons.edit),
+                onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => const AccountSettings()));
+            },
           ),
-          const Options(
-              title_: 'Account Settings',
-              subtitle_: 'Update account Profile',
-              icon_: Icons.edit),
-          Divider(
-            color: Colors.grey[300],
-            indent: 53.0,
-            thickness: 1,
-            height: 0.15,
-          ),
+          customDivider(),
           const Options(
               title_: 'UB Support',
               subtitle_: 'Speak to a suppot agent for help',
@@ -59,6 +58,15 @@ class HomeOptions extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Divider customDivider() {
+    return Divider(
+          color: Colors.grey[900],
+          indent: 53.0,
+          thickness: 0.8,
+          height: 0.15,
+        );
   }
 }
 
@@ -83,10 +91,10 @@ class Options extends StatelessWidget {
           leading: Icon(icon_, size: 18),
           title: Text(title_,
               style:
-                  const TextStyle(fontSize: 13, fontWeight: FontWeight.w500)),
+                  const TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
           subtitle: Text(subtitle_,
               style: const TextStyle(
-                fontSize: 11,
+                fontSize: 14,
                 color: Colors.black54,
               )),
           trailing: Container(
