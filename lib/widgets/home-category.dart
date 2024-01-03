@@ -39,7 +39,7 @@ class CategoryContainer extends StatelessWidget {
                     SizedBox(height: 5,),
                     Text(
                       "Academic Structure",
-                      style: TextStyle(fontSize: 16, color: Colors.blue),
+                      style: TextStyle(fontSize: 12, color: Colors.blue),
                     ),
                     // SizedBox(height: 24,)
                   ],
@@ -47,6 +47,7 @@ class CategoryContainer extends StatelessWidget {
               ));
         },
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          childAspectRatio: 2/4,
           crossAxisCount: 2,
           mainAxisSpacing: 20,
           crossAxisSpacing: 20,

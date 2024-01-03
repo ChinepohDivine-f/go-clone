@@ -62,7 +62,7 @@ class HomeOptions extends StatelessWidget {
 
   Divider customDivider() {
     return Divider(
-          color: Colors.grey[900],
+          color: Colors.grey[300],
           indent: 53.0,
           thickness: 0.8,
           height: 0.15,
@@ -94,7 +94,7 @@ class Options extends StatelessWidget {
                   const TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
           subtitle: Text(subtitle_,
               style: const TextStyle(
-                fontSize: 14,
+                fontSize: 12,
                 color: Colors.black54,
               )),
           trailing: Container(

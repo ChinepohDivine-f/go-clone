@@ -8,6 +8,7 @@ class BottomNav extends StatefulWidget {
 }
 
 class _BottomNavState extends State<BottomNav> {
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,12 +24,13 @@ class _BottomNavState extends State<BottomNav> {
           // currentIndex: 0,
           unselectedFontSize: 14,
           selectedFontSize: 16,
-          onTap: (currentIndex) {
+          onTap: (newIndex) {
+            setState(() {
+              currentIndex = newIndex;
+            });
             if (currentIndex == 0) {
-              _BottomNavState(
-                
-              );
-              
+              _BottomNavState();
+
               Navigator.pushReplacementNamed(context, "/Home");
             }
             if (currentIndex == 1) {
@@ -39,7 +41,7 @@ class _BottomNavState extends State<BottomNav> {
             }
           },
           items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home" ),
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.person), label: "Student Profile"),
             BottomNavigationBarItem(

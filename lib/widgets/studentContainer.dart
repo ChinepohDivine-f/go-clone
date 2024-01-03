@@ -23,7 +23,7 @@ class StudentContainer extends StatelessWidget {
                   borderRadius: const BorderRadius.all(Radius.circular(70)),
                   child: Image.asset(
                     "assets/images/chinepoh.png",
-                    height: 97,
+                    height: 71,
                   )),
               const SizedBox(
                 width: 10,
@@ -37,24 +37,24 @@ class StudentContainer extends StatelessWidget {
                       IntrinsicWidth(
                           child: Column(children: [
                         Text("CHINEPOH DIVINE-FAVOUR",
-                            style: TextStyle(fontSize: 16, color: Colors.blue)),
-                        Text("FE21A159",
-                            style: TextStyle(fontSize: 16, color: Colors.blue)),
-                        Text("B.ENG COMPUTER ENGINEERING",
                             style: TextStyle(fontSize: 14, color: Colors.blue)),
+                        Text("FE21A159",
+                            style: TextStyle(fontSize: 12, color: Colors.blue)),
+                        Text("B.ENG COMPUTER ENGINEERING",
+                            style: TextStyle(fontSize: 12, color: Colors.blue)),
                       ])),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Text("2023/2024",
                               style:
-                                  TextStyle(fontSize: 14, color: Colors.black54)),
+                                  TextStyle(fontSize: 12, color: Colors.black54)),
                           SizedBox(
                             width: 35,
                           ),
                           Text("First Semester",
                               style:
-                                  TextStyle(fontSize: 14, color: Colors.black54))
+                                  TextStyle(fontSize: 12, color: Colors.black54))
                         ],
                       ),
                     ],
